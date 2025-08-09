@@ -1,58 +1,187 @@
-Space Survival 🚀
-A classic arcade-style space shooter game built in C++. Navigate your ship, dodge incoming asteroids, and shoot them down to achieve the high score!
+# Space Survival 🚀
 
-About The Game 🎮
-Space Survival is a console-based game that brings back the retro feel of old-school arcade shooters. The player controls a spaceship at the bottom of the screen, with the ability to move left and right and fire bullets. The objective is to destroy falling obstacles (asteroids) to score points. The game features two different modes: Campaign and Time-Based, each offering a unique challenge. It keeps track of the high score, so you can always aim to beat your personal best!
+A classic console-based space shooter game developed in C++ where players navigate through space, avoiding obstacles and shooting enemies to survive.
 
-Features ✨
-Classic Gameplay: Simple and intuitive arcade action.
+## 🎮 Game Overview
 
-Two Game Modes:
+**Space Survival** is an exciting arcade-style shooter game that runs directly in your console/terminal. Take control of a spaceship, dodge incoming obstacles, and use your weapons to blast through enemies while trying to achieve the highest score possible!
 
-Campaign Mode: Survive as long as you can with a limited number of lives.
+## 👥 Development Team
 
-Time-Based Mode: Score as many points as possible before the timer runs out.
+**Project Group 11:**
+- **Ashan** (IM/2022/025)
+- **Nirasha** (IM/2022/024) 
+- **Tharindu** (IM/2022/112)
+- **Gihan** (IM/2022/111)
 
-Persistent High Score: The game saves the highest score, so you can always challenge yourself.
+## ✨ Features
 
-Dynamic ASCII Art: Smooth animations and vibrant visuals created entirely with text characters.
+### 🎯 Game Modes
+- **Campaign Mode**: Start with 5 ship lives - each collision reduces your strength by 1
+- **Time-Based Mode**: Race against time with limited energy to achieve maximum score
 
-User-friendly Interface: Easy-to-navigate menus and clear instructions.
+### 🎮 Gameplay Elements
+- Smooth ship movement controls
+- Dual bullet shooting system
+- Dynamic obstacle generation
+- Collision detection system
+- High score tracking and saving
+- Sound effects for enhanced experience
+- ASCII art graphics and animations
 
-Keyboard Controls: Responsive controls for an engaging experience.
+### 🎨 Visual Features
+- Colorful console interface
+- Custom ASCII art ship design
+- Animated game over screen
+- Multiple themed UI screens
+- Border graphics and visual effects
 
-How To Play 🕹️
-The controls for Space Survival are straightforward:
+## 🎮 Controls
 
-Move Left: ⬅️ (Left Arrow Key)
+| Key | Action |
+|-----|--------|
+| `←` | Move ship left |
+| `→` | Move ship right |
+| `Space` | Fire bullets |
+| `Esc` | Pause/Exit game |
 
-Move Right: ➡️ (Right Arrow Key)
+## 🚀 Getting Started
 
-Shoot: Spacebar
+### Prerequisites
+- Windows operating system (uses Windows-specific libraries)
+- C++ compiler (Visual Studio, Dev-C++, or similar)
+- Console/Command Prompt support
 
-Pause/Quit: Esc
+### Installation & Running
 
-The goal is to shoot down the falling asteroids. Each successful hit earns you a point. In Campaign Mode, you have a limited number of lives, and each collision with an asteroid costs you one life. In Time-Based Mode, you have a set amount of time to score as many points as you can.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/space-survival.git
+   cd space-survival
+   ```
 
-Game Modes 🎯
-Campaign Mode
-In this mode, you start with 5 "Rocket Strength" points (lives). Each time an asteroid collides with your ship, you lose one strength point. The game ends when your rocket's strength reaches zero. Aim to get the highest score possible before that happens!
+2. **Compile the game:**
+   ```bash
+   g++ -o space_survival "space survival.cpp"
+   ```
 
-Time-Based Mode
-This mode challenges you to score as many points as you can within a limited time. Your ship's "Rocket Energy" acts as a countdown timer. The game ends when the energy runs out. A collision with an asteroid in this mode will end the game immediately.
+3. **Run the game:**
+   ```bash
+   ./space_survival.exe
+   ```
 
-Getting Started 💻
-To compile and run this game on your local machine, you will need a C++ compiler (like g++).
+## 📁 Project Structure
 
-Prerequisites
-A C++ compiler (e.g., g++, MinGW for Windows)
+```
+space-survival/
+│
+├── space survival.cpp    # Main game source code
+├── highscore.txt        # High score storage (auto-generated)
+├── README.md           # This file
+└── docs/               # Documentation (if any)
+```
 
-A terminal or command prompt that supports C++ compilation.
+## 🎯 How to Play
 
+1. **Start the Game**: Press `Space` on the main menu to start your rocket engine
+2. **Enter Your Name**: Provide your astronaut name for the leaderboard
+3. **Choose Game Mode**: Select between Campaign or Time-based mode
+4. **Survive & Score**: 
+   - Use arrow keys to move your ship
+   - Press `Space` to shoot bullets at incoming obstacles
+   - Avoid collisions to maintain your ship's health
+   - Achieve the highest score possible!
 
+### Campaign Mode
+- Start with 5 ship lives
+- Each collision reduces your strength
+- Game ends when all lives are lost
+- Focus on survival and steady scoring
 
+### Time-Based Mode
+- Limited energy/time to play
+- Race against the countdown timer
+- Maximize your score before energy runs out
+- High-intensity gameplay
 
+## 🏆 Scoring System
 
+- **Successful Hit**: +1 point per obstacle destroyed
+- **High Score**: Automatically saved and displayed
+- **New Record**: Special congratulations message for beating previous high scores
 
+## 🔧 Technical Details
 
+### Dependencies
+- `<iostream>` - Input/output operations
+- `<windows.h>` - Windows console handling and sound
+- `<conio.h>` - Keyboard input detection
+- `<time.h>` - Random number generation
+- `<fstream>` - File handling for high scores
 
+### Key Functions
+- **Movement System**: Smooth ship controls with boundary detection
+- **Bullet System**: Dual-bullet firing mechanism
+- **Collision Detection**: Precise hit detection between objects
+- **Score Management**: File-based high score persistence
+- **Sound Effects**: Beep sounds for game events
+
+## 🎨 Game Elements
+
+### Ship Design
+```
+   *
+[]*[]
+=***=
+```
+
+### Obstacle Pattern
+```
+ -^-
+ ***
+-!!!-
+  +
+```
+
+## 🐛 Known Issues & Limitations
+
+- **Platform Dependency**: Currently Windows-only due to `windows.h` usage
+- **Console Colors**: May not display correctly on all terminal types
+- **Fixed Resolution**: Designed for standard console window sizes
+
+## 🚧 Future Enhancements
+
+- [ ] Cross-platform compatibility (Linux/Mac support)
+- [ ] Multiple difficulty levels
+- [ ] Power-ups and special weapons
+- [ ] Multiplayer support
+- [ ] Enhanced graphics and animations
+- [ ] Sound track and improved audio
+- [ ] Level progression system
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### How to Contribute
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Support & Contact
+
+If you encounter any issues or have questions about the game, please:
+- Open an issue on GitHub
+- Contact the development team members
+
+---
+
+**Enjoy your space survival adventure! 🚀✨**
+
+*Made with ❤️ by Project Group 11*
